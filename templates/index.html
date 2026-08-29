@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXUS AI — Knowledge Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ✦
+            </div>
+
+            <div>
+                <div class="brand-name">
+                    NEXUS
+                </div>
+
+                <div class="brand-subtitle">
+                    AI KNOWLEDGE
+                </div>
+            </div>
+
+        </div>
+
+
+        <button
+            class="new-chat"
+            id="newChatBtn"
+        >
+            <span>＋</span>
+            New Chat
+        </button>
+
+
+        <div class="sidebar-section">
+
+            <div class="section-label">
+                WORKSPACE
+            </div>
+
+            <button
+                class="side-button active"
+                id="chatTab"
+            >
+                <span>◉</span>
+                AI Assistant
+            </button>
+
+            <button
+                class="side-button"
+                id="knowledgeTab"
+            >
+                <span>▣</span>
+                Knowledge Base
+            </button>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <div class="section-label">
+                KNOWLEDGE
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ◈
+                </div>
+
+                <div>
+
+                    <div
+                        class="stat-number"
+                        id="documentCount"
+                    >
+                        0
+                    </div>
+
+                    <div class="stat-label">
+                        Documents
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ◇
+                </div>
+
+                <div>
+
+                    <div
+                        class="stat-number"
+                        id="chunkCount"
+                    >
+                        0
+                    </div>
+
+                    <div class="stat-label">
+                        Knowledge Chunks
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="connection">
+
+                <span
+                    class="connection-dot"
+                    id="connectionDot"
+                ></span>
+
+                <span id="connectionText">
+                    Checking system...
+                </span>
+
+            </div>
+
+            <button
+                class="clear-button"
+                id="clearBtn"
+            >
+                🗑 Clear Knowledge Base
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="page-title">
+                    AI Knowledge Assistant
+                </div>
+
+                <div class="page-subtitle">
+                    Ask questions. Explore your data.
+                </div>
+
+            </div>
+
+
+            <div class="top-status">
+
+                <span class="pulse"></span>
+
+                <span>
+                    NEXUS ONLINE
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- CHAT -->
+
+        <section
+            class="chat-section"
+            id="chatSection"
+        >
+
+            <div
+                class="welcome"
+                id="welcome"
+            >
+
+                <div class="orb">
+
+                    <div class="orb-inner">
+                        ✦
+                    </div>
+
+                </div>
+
+
+                <h1>
+                    What do you want to
+                    <span>discover?</span>
+                </h1>
+
+
+                <p>
+                    Upload your documents and let NEXUS
+                    search, understand and explain your
+                    own knowledge.
+                </p>
+
+
+                <div class="quick-actions">
+
+                    <button
+                        class="suggestion"
+                        data-question="Summarize the main points from my documents."
+                    >
+                        <span>◈</span>
+                        Summarize my documents
+                    </button>
+
+                    <button
+                        class="suggestion"
+                        data-question="What are the most important concepts in my documents?"
+                    >
+                        <span>✧</span>
+                        Find important concepts
+                    </button>
+
+                    <button
+                        class="suggestion"
+                        data-question="Explain the main topic in simple words."
+                    >
+                        <span>◇</span>
+                        Explain simply
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="messages"
+                id="messages"
+            ></div>
+
+        </section>
+
+
+        <!-- INPUT -->
+
+        <section class="input-area">
+
+            <div class="upload-preview" id="uploadPreview"></div>
+
+            <form id="chatForm">
+
+                <div class="input-box">
+
+                    <label
+                        for="fileInput"
+                        class="attach-button"
+                        title="Upload document"
+                    >
+                        📎
+                    </label>
+
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept=".pdf,.docx,.txt"
+                        hidden
+                    >
+
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Ask NEXUS anything about your knowledge..."
+                        rows="1"
+                    ></textarea>
+
+
+                    <button
+                        type="submit"
+                        class="send-button"
+                        id="sendButton"
+                    >
+                        ➜
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div class="input-footer">
+
+                <span>
+                    NEXUS can make mistakes. Verify important information.
+                </span>
+
+                <span>
+                    RAG • FAISS • Ollama
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- KNOWLEDGE PANEL -->
+
+    <section
+        class="knowledge-panel"
+        id="knowledgePanel"
+    >
+
+        <div class="panel-header">
+
+            <div>
+
+                <h2>
+                    Knowledge Base
+                </h2>
+
+                <p>
+                    Your AI memory
+                </p>
+
+            </div>
+
+            <button
+                id="closeKnowledge"
+                class="close-button"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="drop-zone" id="dropZone">
+
+            <div class="drop-icon">
+                ↑
+            </div>
+
+            <h3>
+                Drop your knowledge here
+            </h3>
+
+            <p>
+                PDF, DOCX or TXT
+            </p>
+
+            <button
+                id="uploadButton"
+                class="upload-button"
+            >
+                Choose Files
+            </button>
+
+        </div>
+
+
+        <div class="files-title">
+            Indexed Documents
+        </div>
+
+
+        <div
+            class="document-list"
+            id="documentList"
+        >
+            <div class="empty-files">
+                No documents indexed yet.
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+
+<div
+    class="toast"
+    id="toast"
+></div>
+
+
+<script
+    src="{{ url_for('static', filename='app.js') }}"
+></script>
+
+</body>
+
+</html>

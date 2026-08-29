@@ -1,0 +1,98 @@
+[
+  {
+    "id": "d291dffb-8562-4529-bed3-f49de5a3b33a",
+    "filename": "NEXUS_AI_Test_Document.docx",
+    "chunk": 1,
+    "text": "NEXUS AI – RAG Test Knowledge Base\nThis document is designed to test the NEXUS AI RAG chatbot. Upload it to the Knowledge Base and ask questions about the content.\n1. Artificial Intelligence\nArtificial Intelligence (AI) is a branch of computer science focused on building systems that can perform tasks associated with human intelligence. These tasks include reasoning, learning, planning, understanding language, recognizing images, and making decisions.\n2. Machine Learning\nMachine Learning (ML) is a subset of Artificial Intelligence. It enables computers to learn patterns from data and make predictions or decisions without being explicitly programmed for every possible situation. Common types of machine learning are supervised learning, unsupervised learning, and reinforcement learning.\n3. N"
+  },
+  {
+    "id": "6cab25be-6a8b-422c-8e56-c56e45a61501",
+    "filename": "NEXUS_AI_Test_Document.docx",
+    "chunk": 2,
+    "text": "rammed for every possible situation. Common types of machine learning are supervised learning, unsupervised learning, and reinforcement learning.\n3. Natural Language Processing\nNatural Language Processing (NLP) is an area of AI that focuses on enabling computers to understand, process, and generate human language. Applications include sentiment analysis, machine translation, text classification, chatbots, question answering, and summarization.\n4. Retrieval-Augmented Generation\nRetrieval-Augmented Generation, commonly called RAG, combines information retrieval with language generation. When a user asks a question, the system searches a knowledge base for relevant information and gives the retrieved content to a language model as context. The language model then generates an answer using tha"
+  },
+  {
+    "id": "82448c1b-ce16-411c-936e-27629591ab0e",
+    "filename": "NEXUS_AI_Test_Document.docx",
+    "chunk": 3,
+    "text": "ge base for relevant information and gives the retrieved content to a language model as context. The language model then generates an answer using that context.\n5. Vector Databases\nA vector database stores numerical representations of information called embeddings. Embeddings capture semantic meaning. A vector search can therefore find content that is meaningfully related to a question even when the exact words are different. FAISS is a popular library for efficient similarity search over vectors.\n6. Embeddings\nAn embedding is a numerical vector representation of text, an image, or another data type. In a RAG system, documents and user questions can be converted into embeddings. Similar embeddings indicate that the corresponding pieces of information are semantically related.\n7. Ollama\nOll"
+  },
+  {
+    "id": "8a23bfba-2b56-451c-863f-f9d2856f786d",
+    "filename": "NEXUS_AI_Test_Document.docx",
+    "chunk": 4,
+    "text": "ons can be converted into embeddings. Similar embeddings indicate that the corresponding pieces of information are semantically related.\n7. Ollama\nOllama is a tool that allows large language models to run locally on a computer. In the NEXUS AI project, Ollama provides the local language model that generates answers after relevant document chunks have been retrieved.\n8. NEXUS AI Project\nNEXUS AI is a personal knowledge assistant built using Flask, Sentence Transformers, FAISS, and Ollama. It accepts PDF, DOCX, and TXT files. Uploaded documents are converted into text, split into chunks, transformed into embeddings, and stored in a FAISS vector index. When a user asks a question, NEXUS AI retrieves the most relevant chunks and supplies them to Ollama to generate a context-aware response.\n9."
+  },
+  {
+    "id": "867b0d13-6873-4bb8-8cd4-ab3987428be8",
+    "filename": "NEXUS_AI_Test_Document.docx",
+    "chunk": 5,
+    "text": "index. When a user asks a question, NEXUS AI retrieves the most relevant chunks and supplies them to Ollama to generate a context-aware response.\n9. Important Project Facts\nProject name: NEXUS AI\nBackend framework: Flask\nVector search technology: FAISS\nEmbedding model: all-MiniLM-L6-v2\nLocal language model runner: Ollama\nDefault language model: llama3.2\nSupported document formats: PDF, DOCX, and TXT\nMain AI technique: Retrieval-Augmented Generation (RAG)\n10. Test Questions\nWhat is Artificial Intelligence?\nWhat is the difference between AI and Machine Learning?\nWhat are the three common types of Machine Learning?\nWhat is NLP and what are its applications?\nWhat does RAG stand for?\nHow does a RAG system answer a question?\nWhy are vector databases used in RAG?\nWhat is FAISS?\nWhat are embeddin"
+  },
+  {
+    "id": "8af085e1-fa85-4af5-b27b-a8eb0e4c3ccb",
+    "filename": "NEXUS_AI_Test_Document.docx",
+    "chunk": 6,
+    "text": "applications?\nWhat does RAG stand for?\nHow does a RAG system answer a question?\nWhy are vector databases used in RAG?\nWhat is FAISS?\nWhat are embeddings?\nWhat is Ollama used for in NEXUS AI?\nWhat document formats does NEXUS AI support?\nWhat is the default language model used by NEXUS AI?\nExplain the complete NEXUS AI workflow."
+  },
+  {
+    "id": "eee985fa-f530-442f-9ac1-d0edd67c2354",
+    "filename": "AI_and_Machine_Learning.docx",
+    "chunk": 1,
+    "text": "AI and Machine Learning\nNEXUS AI RAG Knowledge Base Test Document\nArtificial Intelligence\nArtificial Intelligence (AI) is a field of computer science that develops systems capable of performing tasks that normally require human intelligence. These tasks include learning, reasoning, planning, decision-making, language understanding, and image recognition.\nMachine Learning\nMachine Learning (ML) is a subset of AI in which computers learn patterns from data and use those patterns to make predictions or decisions. ML systems improve their performance when they receive useful training data.\nSupervised Learning\nSupervised learning uses labeled training data. Each training example contains input features and a known target. Classification predicts categories such as spam or not spam, while regress"
+  },
+  {
+    "id": "9029dfe8-4232-48e6-b327-4a9ecb4a9fcf",
+    "filename": "AI_and_Machine_Learning.docx",
+    "chunk": 2,
+    "text": "ing data. Each training example contains input features and a known target. Classification predicts categories such as spam or not spam, while regression predicts numerical values such as house prices.\nUnsupervised Learning\nUnsupervised learning works with data that does not have labeled target values. Clustering groups similar observations, while dimensionality reduction methods such as PCA reduce the number of features while attempting to preserve useful information.\nReinforcement Learning\nReinforcement learning trains an agent to interact with an environment. The agent selects actions and receives rewards or penalties. Over time it learns a policy that aims to maximize cumulative reward.\nOverfitting\nOverfitting occurs when a model learns the training data too closely, including noise an"
+  },
+  {
+    "id": "575a458d-6ea1-45ab-9e5d-fd4e112cc3ef",
+    "filename": "AI_and_Machine_Learning.docx",
+    "chunk": 3,
+    "text": "a policy that aims to maximize cumulative reward.\nOverfitting\nOverfitting occurs when a model learns the training data too closely, including noise and accidental patterns. An overfitted model can perform very well on training data but poorly on unseen data. Techniques such as cross-validation, regularization, pruning, and collecting more data can help.\nClassification and Regression\nClassification predicts a discrete category, such as whether an email is spam. Regression predicts a continuous numerical value, such as temperature or sales revenue.\nCommon Algorithms\nCommon machine learning algorithms include linear regression, logistic regression, decision trees, random forests, support vector machines, k-nearest neighbors, k-means clustering, and neural networks.\nSuggested Questions\nWhat is"
+  },
+  {
+    "id": "628d9f09-f9aa-4bff-bb82-c5d43c433173",
+    "filename": "AI_and_Machine_Learning.docx",
+    "chunk": 4,
+    "text": "on, decision trees, random forests, support vector machines, k-nearest neighbors, k-means clustering, and neural networks.\nSuggested Questions\nWhat is Artificial Intelligence?\nWhat is Machine Learning?\nWhat is Supervised Learning?\nWhat is Unsupervised Learning?\nWhat is Reinforcement Learning?\nWhat is Overfitting?\nWhat is Classification and Regression?\nWhat is Common Algorithms?"
+  },
+  {
+    "id": "ae312567-040d-4308-8fed-4cbea65af702",
+    "filename": "Python_Programming.docx",
+    "chunk": 1,
+    "text": "Python Programming\nNEXUS AI RAG Knowledge Base Test Document\nPython\nPython is a high-level, general-purpose programming language known for readable syntax and a large ecosystem of libraries. It is widely used in web development, automation, data science, artificial intelligence, and scripting.\nVariables and Data Types\nPython variables store references to values. Common built-in data types include integers, floating-point numbers, strings, booleans, lists, tuples, sets, and dictionaries.\nLists\nA Python list is an ordered, mutable collection. Lists can contain multiple values and can be modified after creation. Common operations include append, insert, remove, pop, sorting, and slicing.\nDictionaries\nA dictionary stores data as key-value pairs. Keys are used to retrieve associated values. Dic"
+  },
+  {
+    "id": "552405b7-1d09-41d4-abba-d47e063c42cb",
+    "filename": "Python_Programming.docx",
+    "chunk": 2,
+    "text": "insert, remove, pop, sorting, and slicing.\nDictionaries\nA dictionary stores data as key-value pairs. Keys are used to retrieve associated values. Dictionaries are useful for representing structured information such as student records.\nFunctions\nA function is a reusable block of code that performs a specific task. Functions can accept parameters and can return values using the return statement.\nObject-Oriented Programming\nObject-oriented programming organizes software around classes and objects. A class defines attributes and methods, while an object is an instance of a class.\nException Handling\nPython uses try, except, else, and finally blocks to handle runtime errors. Exception handling allows a program to respond to errors without necessarily terminating unexpectedly.\nPopular Libraries"
+  },
+  {
+    "id": "3980a9b3-a68b-4673-8ff4-196585131b9a",
+    "filename": "Python_Programming.docx",
+    "chunk": 3,
+    "text": "ks to handle runtime errors. Exception handling allows a program to respond to errors without necessarily terminating unexpectedly.\nPopular Libraries\nPopular Python libraries include NumPy for numerical computing, pandas for data manipulation, Matplotlib for visualization, scikit-learn for machine learning, Flask for lightweight web applications, and FastAPI for APIs.\nSuggested Questions\nWhat is Python?\nWhat is Variables and Data Types?\nWhat is Lists?\nWhat is Dictionaries?\nWhat is Functions?\nWhat is Object-Oriented Programming?\nWhat is Exception Handling?\nWhat is Popular Libraries?"
+  },
+  {
+    "id": "cdb8ae2d-1293-46cb-892f-c6864d5592f5",
+    "filename": "Cyber_Security.docx",
+    "chunk": 1,
+    "text": "Cyber Security\nNEXUS AI RAG Knowledge Base Test Document\nCyber Security\nCyber security is the practice of protecting computers, networks, applications, and data from unauthorized access, disruption, modification, or destruction.\nCIA Triad\nThe CIA triad represents confidentiality, integrity, and availability. Confidentiality protects information from unauthorized disclosure, integrity protects information from unauthorized alteration, and availability ensures authorized users can access resources when needed.\nPhishing\nPhishing is a social engineering technique in which an attacker attempts to trick a person into revealing information or performing an unsafe action. Phishing messages may imitate trusted organizations.\nMalware\nMalware is malicious software designed to damage systems, steal in"
+  },
+  {
+    "id": "f47a0c0b-297c-477b-8e8e-4e20d2a45ca1",
+    "filename": "Cyber_Security.docx",
+    "chunk": 2,
+    "text": "ming an unsafe action. Phishing messages may imitate trusted organizations.\nMalware\nMalware is malicious software designed to damage systems, steal information, disrupt operations, or gain unauthorized access. Examples include viruses, worms, trojans, ransomware, and spyware.\nEncryption\nEncryption transforms readable plaintext into ciphertext using a cryptographic process. Decryption converts ciphertext back into readable information for an authorized recipient.\nAuthentication and Authorization\nAuthentication verifies who a user is. Authorization determines what an authenticated user is allowed to access or perform.\nPasswords\nStrong passwords should be long, unique, and difficult to guess. Password managers and multi-factor authentication can improve account security. Systems should store"
+  },
+  {
+    "id": "754d316d-1fbf-4cc9-8ea9-be9352f40ae1",
+    "filename": "Cyber_Security.docx",
+    "chunk": 3,
+    "text": "should be long, unique, and difficult to guess. Password managers and multi-factor authentication can improve account security. Systems should store passwords using secure password hashing rather than plain text.\nNetwork Security\nNetwork security uses technologies and practices such as firewalls, intrusion detection, access controls, secure protocols, segmentation, and monitoring to reduce security risks.\nSuggested Questions\nWhat is Cyber Security?\nWhat is CIA Triad?\nWhat is Phishing?\nWhat is Malware?\nWhat is Encryption?\nWhat is Authentication and Authorization?\nWhat is Passwords?\nWhat is Network Security?"
+  }
+]
